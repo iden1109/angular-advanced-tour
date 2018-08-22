@@ -17,6 +17,7 @@
               <div *ngIf="emailModel.errors['minlength']">4 digits at least</div>
             </div>
             {{ 'valid: ' + emailModel.valid }}
+            {{ emailModel.errors | json }}
           </fieldset>
           <fieldset class="form-group">
             <input name="password" class="form-control form-control-lg" type="password" placeholder="Password">

@@ -4,11 +4,13 @@ import { PostComponent } from './post/post.component';
 import { PostsComponent } from './posts/posts.component';
 import { EditorComponent } from './editor/editor.component';
 import { PostsRoutingModule } from './posts-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
-    PostsRoutingModule
+    PostsRoutingModule,
+    HttpClientModule
   ],
   declarations: [PostComponent, PostsComponent, EditorComponent],
   exports: [
