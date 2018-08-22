@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { PostComponent } from './post/post.component';
 import { PostsComponent } from './posts/posts.component';
 import { EditorComponent } from './editor/editor.component';
-import { AppRoutingModule } from '../app-routing.module';
+import { PostsRoutingModule } from './posts-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    AppRoutingModule
+    PostsRoutingModule
   ],
   declarations: [PostComponent, PostsComponent, EditorComponent],
   exports: [

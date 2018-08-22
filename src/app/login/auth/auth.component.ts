@@ -8,6 +8,11 @@ import { Router } from '@angular/router';
 })
 export class AuthComponent implements OnInit {
 
+  private user = {
+    email: 'iden1109@gmail.com',
+    password: '1234'
+  };
+
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -15,6 +20,6 @@ export class AuthComponent implements OnInit {
 
   doLogin(event: Event) {
     event.preventDefault();
-    this.router.navigate(['/', 'create']);
+    this.router.navigate(['/', 'posts']);
   }
 }
