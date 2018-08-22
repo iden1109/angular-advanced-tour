@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-auth',
@@ -7,6 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent implements OnInit {
+
+  @ViewChild('emailDOM') emailDOM: ElementRef;
+  @ViewChild('emailModel') emailModel: NgModel;
 
   private user = {
     email: 'iden1109@gmail.com',
@@ -16,6 +20,8 @@ export class AuthComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    console.log(this.emailDOM.nativeElement);
+    const elm: HTMLInputElement = this.emailDOM.nativeElement;
   }
 
   doLogin(event: Event) {

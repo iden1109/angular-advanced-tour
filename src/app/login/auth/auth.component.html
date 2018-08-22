@@ -7,8 +7,8 @@
 
         <form>
           <fieldset class="form-group">
-            <input name="email" [(ngModel)]="user.email" #email="ngModel" class="form-control form-control-lg" type="text" placeholder="Email">
-            {{ email.value }}
+            <input name="email" [(ngModel)]="user.email" #emailModel="ngModel" #emailDOM class="form-control form-control-lg" type="text" placeholder="Email">
+            {{ emailModel.value }}
           </fieldset>
           <fieldset class="form-group">
             <input name="password" class="form-control form-control-lg" type="password" placeholder="Password">
