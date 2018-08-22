@@ -6,9 +6,17 @@
         <h1 class="text-xs-center">Sign in</h1>
 
         <form>
-          <fieldset class="form-group">
-            <input name="email" [(ngModel)]="user.email" #emailModel="ngModel" #emailDOM class="form-control form-control-lg" type="text" placeholder="Email">
+          <fieldset class="form-group" [ngClass]="{'has-danger': emailModel.invalid}">
+            <input name="email" [(ngModel)]="user.email" 
+              #emailModel="ngModel" #emailDOM class="form-control form-control-lg" 
+              required minlength="4"
+              type="text" placeholder="Email">
             {{ emailModel.value }}
+            <div *ngIf="emailModel.invalid">
+              <div *ngIf="emailModel.errors['required']">email required</div>
+              <div *ngIf="emailModel.errors['minlength']">4 digits at least</div>
+            </div>
+            {{ 'valid: ' + emailModel.valid }}
           </fieldset>
           <fieldset class="form-group">
             <input name="password" class="form-control form-control-lg" type="password" placeholder="Password">
