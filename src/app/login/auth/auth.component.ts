@@ -13,7 +13,8 @@ export class AuthComponent implements OnInit {
   ngOnInit() {
   }
 
-  doLogin() {
+  doLogin(event: Event) {
+    event.preventDefault();
     this.router.navigate(['/', 'create']);
   }
 }
