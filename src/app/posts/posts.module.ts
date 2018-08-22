@@ -5,12 +5,14 @@ import { PostsComponent } from './posts/posts.component';
 import { EditorComponent } from './editor/editor.component';
 import { PostsRoutingModule } from './posts-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     PostsRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   declarations: [PostComponent, PostsComponent, EditorComponent],
   exports: [
